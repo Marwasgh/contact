@@ -1,0 +1,54 @@
+<app-navbar1></app-navbar1>
+<div class="container">
+  <div class="row">
+      <div class="col-md-12 col-md-offset-3">
+          <div class="contact-list">
+              <div class="contact">
+                
+              </div>
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                      <div class="row">
+                          <div class="col-md-8 col-xs-6 wrap">
+                              <p class="name">Liste de contact</p>
+                          </div>
+                          <div class="col-md-4 col-xs-6 text-right">
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-earphone" title="Ring telefon"></button>
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-phone" title="Ring mobil"></button>
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-envelope" title="Skicka e-mail"></button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default" *ngFor="let contact of contacts">
+                  <div class="panel-body">
+                      <div class="row">
+                          <div class="col-md-12 col-xs-6 wrap">
+                              <p class="name">{{contact.nom }}</p>
+                          </div>
+                          <div class="col-xs-6 text-right visible-xs">
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-earphone" title="Ring telefon"></button>
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-phone" title="Ring mobil"></button>
+                              <button type="button" class="btn btn-default btn-sm glyphicon glyphicon-envelope" title="Skicka e-mail"></button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="panel-footer hidden-xs">
+                      <div class="row">
+                          <div class="col-sm-2">
+                              <b>Nom</b>
+                              <p>{{contact.nom }}</p>
+                          </div>
+                          <div class="col-sm-3">
+                              <b>E-mail</b>
+                              <p>{{contact.email }}</p> 
+                          </div>
+                          <div class="col-sm-4">
+                              <b>Message</b>
+                              <p>{{contact.msg }}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+<app-navbar3></app-navbar3>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+  <body>
+<div class="wrapper">
+    <div class="overlay">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-9">
+                <div class="contact-us text-center">
+                    <h3>CONTACTEZ NOUS</h3>
+                   <div class="row">
+                        <div class="col-md-6">
+                            <div class="mt-5 text-center px-3">
+                                <div class="d-flex flex-row align-items-center"> <span class="icons"><i class="fas fa-map-marker-alt"></i></span>
+                                    <div class="address text-left"> <span>Adresse</span>
+                                        <p>Avenue Habib Bourguiba 8080 Menzel Temine, Tunisia</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mt-3"> <span class="icons"><i class="fas fa-phone-alt"></i></span>
+                                    <div class="address text-left"> <span>Téléphone</span>
+                                        <p>72300771</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mt-3"> <span class="icons"><i class="fas fa-envelope"></i></span>
+                                    <div class="address text-left"> <span>Email</span>
+                                        <p>Bazinfo2@planet.tn</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center px-1">
+                                <div class="forms p-4 py-5 bg-white">
+                                    <h5>Envoyer Message</h5> 
+                                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                                    <div class="mt-4 inputs">
+                                         <input type="text" formControlName="nom" class="form-control"   id="form3Example1cg" class="form-control form-control-lg" placeholder="Votr Nom"> 
+                                         <input type="email" formControlName="email" class="form-control"   id="form3Example3cg" class="form-control form-control-lg" placeholder="Votre Email"/>
+                                         <textarea formControlName="msg" class="form-control"   id="form3Example3cg" class="form-control form-control-lg"  placeholder="Votre Message"></textarea> 
+                                     </div>
+                                     <div class="button mt-4 text-left"> 
+                                        <button class="btn btn-dark" type="submit" [disabled]="loading">Envoyer</button> 
+                                     </div>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<app-footer></app-footer>
